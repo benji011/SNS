@@ -21,6 +21,7 @@ def register_account(name, email, country):
 # call register_account first when file is executed
 # データーベースを起動させる
 if __name__ == "__main__":
+      # help: heeelp
       connector = MySQLdb.connect(host="localhost", db="socialnetwork", user="msusr", password="mspsw", charset="utf8")
   cursor = connector.cursor()
   cursor.execute("select * from user_account")
