@@ -31,8 +31,8 @@ def login(name):
 
     #Help: クエリーで保存されている情報を取得しようとします
     search =  "select * from user_account where name=%s"
-    printResult = cursor.execute(search, name)
-
+    cursor.execute(search, name)
+    printResult = cursor.fetchone()
     return printResult
 
 
