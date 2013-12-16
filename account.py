@@ -9,19 +9,20 @@ def register_account(name, email, country):
 
   registeredStatus = false
   # ユーザー名、メールアドレスとパスワードをデータベースに登録します
-  
+
   # 登録が成功したメッセージを表示します
   if (registeredStatus == True):
     print "アカウント登録が成功しました"
   else:
       print "登録が失敗しました"
 
-  
+
 
 # call register_account first when file is executed
 # データーベースを起動させる
 if __name__ == "__main__":
       # help: heeelp
+      # hint: passwordは別ファイルに保存した方がいいかもね
       connector = MySQLdb.connect(host="localhost", db="socialnetwork", user="msusr", password="mspsw", charset="utf8")
   cursor = connector.cursor()
   cursor.execute("select * from user_account")
