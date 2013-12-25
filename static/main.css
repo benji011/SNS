@@ -1,0 +1,41 @@
+video_form_area {
+    padding:0;
+    background-color: #78B8F8; 
+}
+
+form_area {
+    margin: 0;
+    color: #78B8F8;
+}
+
+
+video_form_area{
+    font; verdana;
+    margin: 0;
+    color: FFFFFF;
+}
+
+.entry {
+}
+
+login {
+    margin-top: 50px;
+    background-color: #f8dce0; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #000E41
+    background-color: #004080;
+}
+
+h1 {
+    padding: 0 1em;
+    color: FFFFFF;
+}
+
+#main {
+    padding: 0;
+    background-color: DBDBFF;
+}
