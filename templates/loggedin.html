@@ -4,25 +4,56 @@
         <title>Gumi Player Network</title>
     </head>
     <body>
-        <form action="/logged_in" method="post">
+        <form name="/main" action="/main" method="post">
         <table>
-            <h1>おかえりなさい【ユーザー名】！</h2>
+            <h2>おかえりなさい【
+                {%for user in user_list%}
+                {{user.name}} 
+                {% endfor %}】！
+            </h2>
         </table>
-        
+    </form>
+
+    <form action="/post" method="post">
         <table>
-            <h2>コメント・動画投稿</h2>
+            <h2>コメント</h2>
             <tr>
                 <td>
-                    <textarea rows="20" cols="40" name="comment" values="comment"></textarea>
+                    コメント投稿用
+                    <p><textarea rows="5" cols="50" name="comment" values="comment"></textarea></p>
                 </td>
             </tr>
         </table>
-
-        <table>
-            <h2>投稿を表示してくる部分</h2>
-            <p>投稿スレッド</p>
-        </table>
+        <p><button type="submit">コメント送信</button></p>
     </form>
+
+    <div id="video-form-area">
+
+    <form action="/post_video" method="post">
+        <table>
+            <tr>
+                <td>
+                    動画投稿用
+                    <p><textarea rows="5" cols="50" name="post_video" values="post_video"></textarea></p>
+                </td>
+            </tr>
+        </table>
+        <p><button type="submit">動画を送信</button></p>
+    </form>
+    </div>
+
+    <div class="entries">
+        {% for comment in comment_list%}
+        <p>{{comment.comment}}</p>
+        {% endfor %}
+    </div>
+
+    <div class="videoentries">
+        {% for video in video_list %}
+        <p>{{video.post_video}}</p>
+        <h3><iframe width="510" height="210" src="{{video.post_video}}" frameborder="0" allowfullscreen></iframe></h3>
+        {% endfor %}
+    </div>
     </body>
 </html>
 

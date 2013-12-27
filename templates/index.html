@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<xml version="1.0" encoding="utf-8"?>
 <html>
     <head>
         <title>Gumi Player Network</title>
     </head>
 
     <body>
-        <form action="/logged_in" method="post">
+        <form name="logged_in" action="/logged_in" method="post">
         <table>
             <h1>Gumi Player Network</h1>
             <div id="login-area">
@@ -16,15 +16,35 @@
                         <p>アカウントにログインしてください</p>
                     </tr>
                     <form action="/logged_in" method="post"> 
-                    <td> ユーザー名<textarea rows="1" cols="12" name="username" value="username"></textarea> </td>
-                    <td> メールアドレス<textarea rows="1" cols="12" name="email" value="email"></textarea> </td>
+                        <td> ユーザー名<textarea rows="1" cols="12" name="name" value="name"></textarea> </td>
                 </tr>
                 <td>
                     <p><button type="submit">送信</button></p>
                 </td>
 
-            </div>
+
+                <form name="register" action="/register" method="post">
+                <table>
+                    <tr>
+                        <th>新規アカウント</th>
+                        <td>
+                            <tr>
+                                <tr> --------------------------------------------------------------------------------
+                                    <p></p>
+                                ユーザー名　<textarea rows="1" cols="12" name="username"></textarea>
+                                メールアドレス　<textarea rows="1" cols="12" name="email"></textarea>
+                                <p>国　　<textarea rows="1" cols="12" name="country"></textarea></p>
+                                <p></p>
+                                <p><button type="submit">アカウント登録</button></p>
+                            </tr> ------------------------------------------------------------------------------------
+                            </tr>
+                        </td>
+                         </tr>
+                     </table>
+                 </form>
+            </form>
         </table>
+
         </form>
         <table>
             <tr>
